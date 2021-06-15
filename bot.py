@@ -32,7 +32,7 @@ async def yt(ctx):
 @client.command(pass_context = True)
 async def join(ctx):
     if (ctx.author.voice):
-        channel = ctx.author.voice.channel
+        channel = ctx.message.author.voice.channel
         await channel.connect()
     else:
         await ctx.send("you need to be in voice channel to make bot join")
