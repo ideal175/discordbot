@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+import os
 
 client = commands.Bot(command_prefix="!")
 
@@ -30,4 +30,4 @@ async def yt(ctx):
     await ctx.send("https://www.youtube.com/channel/UCLN1vLtK5SU1saRlo1pwCLA")
 
 
-client.run('ODU0MDM5NjQ0OTI3Njg4NzYy.YMeIZg.Th82UYM5SPnWdm__d0pLOB0xIQo')
+client.run(os.getenv('TOKEN'))
