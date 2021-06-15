@@ -28,8 +28,7 @@ async def plsjoke(ctx):
 @client.command()
 async def yt(ctx):
     await ctx.send("https://www.youtube.com/channel/UCLN1vLtK5SU1saRlo1pwCLA")
-    
-    
+
 @client.command(pass_context = True)
 async def join(ctx):
     if (ctx.author.voice):
@@ -37,7 +36,6 @@ async def join(ctx):
         await channel.connect()
     else:
         await ctx.send("you need to be in voice channel to make bot join")
-
 
 
 client.run(os.getenv('TOKEN'))
