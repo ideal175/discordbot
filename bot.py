@@ -30,12 +30,12 @@ async def yt(ctx):
     await ctx.send("https://www.youtube.com/channel/UCLN1vLtK5SU1saRlo1pwCLA")
 
 @client.command(pass_context = True)
-async def join(ctx):
+async def j(ctx):
     if (ctx.author.voice):
         channel = ctx.message.author.voice.channel
         await channel.connect()
     else:
-        await ctx.send("you need to be in voice channel to make bot join")
+        await ctx.send("you need to be in voice channel")
 
 @client.command(pass_context = True)
 async def leave(ctx):
